@@ -1,2 +1,5 @@
-# dev.pointlook.com
-development URL
+# Development url
+------------
+-- WIP
+
+(c) 2015 PointLook
