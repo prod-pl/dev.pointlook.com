@@ -1,2 +1,4 @@
+. ~/.bashrc
+
 npm i
 npm run server
