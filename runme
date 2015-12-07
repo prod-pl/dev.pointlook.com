@@ -1,16 +1,10 @@
-HOME=/home/www
+DATE=$(date)
+PWD=$(pwd)
 
-eval "$(direnv hook bash)"
-export PATH="$HOME/.pyenv/bin:$PATH"
-export PATH="$HOME/.rvm/bin:$PATH" # Add RVM to PATH for scripting
+echo $DATE
+echo "Starting all processes owned by $PWD ..."
 
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
-[ -s "$HOME/.nvm/nvm.sh" ] && . $HOME/.nvm/nvm.sh
-[ -s "$HOME/.rvm/scripts/rvm" ] && .  $HOME/.rvm/scripts/rvm
-[ -s "$HOME/.gvm/scripts/gvm" ] && .  $HOME/.gvm/scripts/gvm
-
-
-npm i
-npm run server
+#[ ! -f ./node_modules ] && npm install
+#[ ! -f ./bower_components ] && bower install
+# npm install && bower install
+$HOME/.meteor/meteor --production --settings $PWD/settings.json --port 3000
