@@ -1,3 +1,4 @@
 SITE=`pwd`
+PORT=8000
 
-ps -ef |grep $SITE | grep -v grep | awk '{ print $2 }' | xargs kill -9
+ps -ef |grep $PORT | grep -v grep | awk '{ print $2 }' | xargs kill -9
