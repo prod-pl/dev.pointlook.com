@@ -1,4 +1,0 @@
-{
-    "cmd": ["tsc", "$file"],
-    "selector": "source.ts"
-}
